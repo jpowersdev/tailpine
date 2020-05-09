@@ -1,0 +1,20 @@
+name: tailpine
+recipe: wordpress
+config:
+  php: 7.4
+  via: nginx
+  webroot: web
+  database: mariadb
+  xdebug: true
+
+services:
+  theme:
+    type: node:12.16
+    ssl: true
+    build:
+      - yarn --cwd "web/app/themes/sage" install
+    command: yarn --cwd "web/app/themes/sage" start
+
+tooling:
+  yarn:
+    service: theme
