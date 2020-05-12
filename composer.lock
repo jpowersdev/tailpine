@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d5e8b2a3ffa8147b3fb222511aa7502",
+    "content-hash": "f7d1755d2f6c10a6a15fe12b037b702a",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
-            "version": "5.8.9",
+            "version": "5.8.10",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.9"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.10"
             },
             "require": {
                 "composer/installers": "^1.8",
@@ -301,16 +301,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.4",
+            "version": "5.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.4"
+                "reference": "5.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.4",
-                "reference": "5.4"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.4.1",
+                "reference": "5.4.1"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -334,7 +334,13 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2020-03-31T20:06:05+00:00"
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/rootsdev",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-04-29T18:50:02+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -636,24 +642,6 @@
                 }
             ],
             "time": "2020-05-02T14:08:57+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.9",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.9.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         }
     ],
     "packages-dev": [

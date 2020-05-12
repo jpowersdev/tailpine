@@ -1,5 +1,10 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "*.php",
+    "!(node_modules)/**/*.php",
+    "!(node_modules)/**/*.js",
+    "!(node_modules)/**/*.html"
+  ],
   target: "relaxed",
   prefix: "",
   important: false,

@@ -40,7 +40,7 @@ class Options extends Field
      *
      * @var int
      */
-    public $position = PHP_INT_MAX;
+    public $position = PHP_INT_MIN;
 
     /**
      * The slug of another admin page to be used as a parent.
@@ -105,6 +105,28 @@ class Options extends Field
     public function fields()
     {
         $options = new FieldsBuilder('options');
+
+        $options
+            ->addImage('company_logo', [
+                'label' => 'Company Logo',
+                'required' => 0,
+                'conditional_logic' => [],
+                'wrapper' => [
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ]);
 
         $options
         ->addColorPicker('primary_theme_color', [

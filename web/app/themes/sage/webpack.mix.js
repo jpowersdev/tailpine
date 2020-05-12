@@ -2,6 +2,7 @@ const mix = require("laravel-mix");
 require("@tinypixelco/laravel-mix-wp-blocks");
 require("laravel-mix-purgecss");
 require("laravel-mix-copy-watched");
+require("mix-tailwindcss");
 
 /*
  |--------------------------------------------------------------------------
@@ -17,8 +18,16 @@ require("laravel-mix-copy-watched");
 mix.setPublicPath("./dist").browserSync("tailpine.lndo.site");
 
 mix
-  .sass("resources/assets/styles/app.scss", "styles")
-  .sass("resources/assets/styles/editor.scss", "styles");
+  .postCss("resources/assets/styles/app.css", "styles")
+  .postCss("resources/assets/styles/editor.css", "styles")
+  .tailwind()
+  .purgeCss({
+    extend: {
+      whitelist: require("purgecss-with-wordpress").whitelist,
+      whitelistPatterns: require("purgecss-with-wordpress").whitelistPatterns
+      // content: ["*.php", "!(node_modules)/**/*.php"]
+    }
+  });
 
 mix
   .js("resources/assets/scripts/app.js", "scripts")
@@ -32,17 +41,6 @@ mix
 
 mix.autoload({
   jquery: ["$", "window.jQuery"]
-});
-
-// Options
-mix.options({
-  processCssUrls: false,
-  postCss: [require("tailwindcss")("./tailwind.config.js")]
-});
-
-mix.purgeCss({
-  whitelist: require("purgecss-with-wordpress").whitelist,
-  whitelistPatterns: require("purgecss-with-wordpress").whitelistPatterns
 });
 
 // Source maps when not in production.

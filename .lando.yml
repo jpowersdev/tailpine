@@ -8,6 +8,9 @@ config:
   xdebug: true
 
 services:
+  appserver:
+    build:
+      - composer install
   theme:
     type: node:12.16
     ssl: true
