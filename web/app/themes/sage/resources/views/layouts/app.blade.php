@@ -1,6 +1,6 @@
 @include('partials.header')
 
-<div class=" h-screen">
+<div class="min-h-screen">
 
   <main class="p-6">
     @yield('content')

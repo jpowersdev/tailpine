@@ -1,9 +1,9 @@
 /**
  * External Dependencies
  */
-import "jquery";
+// import "jquery";
 import "alpinejs";
 
-$(document).ready(() => {
-  // console.log('Hello world');
-});
+// $(document).ready(() => {
+//   // console.log('Hello world');
+// });
